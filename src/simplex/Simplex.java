@@ -8,12 +8,14 @@ import java.util.*;
 import simplex.Entrada.*;
 import simplex.Algoritmo;
 
+
 /**
  *
  * @author David e Victor
  */
 public class Simplex {
-
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -29,9 +31,9 @@ public class Simplex {
         System.out.println("Informe a necessidade \n 1 - MAX \n 2 - MIN");
         holder = in.nextLine();
         int necessidade = Integer.parseInt(holder);
-        
-        Entrada.MontarFuncaoObjetiva(numeroDeVariaveis, necessidade);
-        
+             
+        Entrada entrada = new Entrada ();
+        entrada.MontarFuncaoObjetiva(necessidade, necessidade);
     }
     
 }

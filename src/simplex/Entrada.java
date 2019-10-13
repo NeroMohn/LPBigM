@@ -14,6 +14,8 @@ public class Entrada {
     private String holder;
     private int numeroDeCariaveis;
     double restricoes[][];
+
+   
     
 
     public void MontarSimplex(int reatricoes){
