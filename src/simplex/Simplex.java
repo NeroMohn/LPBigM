@@ -5,6 +5,8 @@
  */
 package simplex;
 import java.util.*;
+import simplex.Entrada.*;
+import simplex.Algoritmo;
 
 /**
  *
@@ -19,7 +21,16 @@ public class Simplex {
         Scanner in = new Scanner(System.in);
         
         System.out.println("Informe o número de variáveis");
+        String holder = in.nextLine();
+        int numeroDeVariaveis = Integer.parseInt(holder);
+        System.out.println("Informe o número de restrições");
+        holder = in.nextLine();
+        int numeroDeRestricoes = Integer.parseInt(holder);
+        System.out.println("Informe a necessidade \n 1 - MAX \n 2 - MIN");
+        holder = in.nextLine();
+        int necessidade = Integer.parseInt(holder);
         
+        Entrada.MontarFuncaoObjetiva(numeroDeVariaveis, necessidade);
         
     }
     
