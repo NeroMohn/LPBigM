@@ -21,6 +21,7 @@ public class Simplex {
      */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        double[] funcaoObjetiva;
         
         System.out.println("Informe o número de variáveis");
         String holder = in.nextLine();
@@ -33,7 +34,8 @@ public class Simplex {
         int necessidade = Integer.parseInt(holder);
              
         Entrada entrada = new Entrada ();
-        entrada.MontarFuncaoObjetiva(necessidade, necessidade);
+        funcaoObjetiva = entrada.MontarFuncaoObjetiva(numeroDeVariaveis, necessidade);
+        
     }
     
 }
