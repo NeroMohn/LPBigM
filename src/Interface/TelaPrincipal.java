@@ -27,34 +27,68 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1PlanoDeFundoTelaPrincipal = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jMenu2Ferramentas = new javax.swing.JMenu();
+        jMenuItem1TelaInicial = new javax.swing.JMenuItem();
+        jMenu3Sair = new javax.swing.JMenu();
+        jMenuItem1SAIR = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        jLabel1PlanoDeFundoTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fundo.jpg"))); // NOI18N
+        getContentPane().add(jLabel1PlanoDeFundoTelaPrincipal);
+        jLabel1PlanoDeFundoTelaPrincipal.setBounds(0, -20, 630, 460);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jMenu2Ferramentas.setText("Ferramentas");
+
+        jMenuItem1TelaInicial.setText("Tela-Inicial");
+        jMenuItem1TelaInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1TelaInicialActionPerformed(evt);
+            }
+        });
+        jMenu2Ferramentas.add(jMenuItem1TelaInicial);
+
+        jMenuBar1.add(jMenu2Ferramentas);
+
+        jMenu3Sair.setText("Sair");
+        jMenu3Sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3SairActionPerformed(evt);
+            }
+        });
+
+        jMenuItem1SAIR.setText("SAIR");
+        jMenuItem1SAIR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1SAIRActionPerformed(evt);
+            }
+        });
+        jMenu3Sair.add(jMenuItem1SAIR);
+
+        jMenuBar1.add(jMenu3Sair);
 
         setJMenuBar(jMenuBar1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
-        );
-
-        setSize(new java.awt.Dimension(418, 347));
+        setSize(new java.awt.Dimension(634, 498));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem1TelaInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1TelaInicialActionPerformed
+        Inicio tela = new Inicio();
+        tela.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenuItem1TelaInicialActionPerformed
+
+    private void jMenu3SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3SairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenu3SairActionPerformed
+
+    private void jMenuItem1SAIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1SAIRActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem1SAIRActionPerformed
 
     /**
      * @param args the command line arguments
@@ -92,8 +126,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JLabel jLabel1PlanoDeFundoTelaPrincipal;
+    private javax.swing.JMenu jMenu2Ferramentas;
+    private javax.swing.JMenu jMenu3Sair;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1SAIR;
+    private javax.swing.JMenuItem jMenuItem1TelaInicial;
     // End of variables declaration//GEN-END:variables
 }

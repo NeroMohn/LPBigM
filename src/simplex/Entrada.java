@@ -19,33 +19,33 @@ public class Entrada {
 
     public double[][] MontarRestricoes(int NumRestricoes,int variaveis){
         double[][] restricoes = new double[NumRestricoes][variaveis+2]; 
-        System.out.println("Agora vamos montar suas restrucoes");
+        System.out.println("\n\n Agora vamos montar suas restrucoes");
         for(int i = 0; i< NumRestricoes; i++){
             for(int j = 0; j < variaveis; j++){
-                System.out.println("Informe o coeficiente de X"+(j+1)+"da restricao "+i+1);
+                System.out.println("\n Informe o coeficiente de X"+(j+1)+" da restricao "+i+1);
                 holder = in.nextLine();      
                 restricoes[i][j]=Double.parseDouble(holder);  
             }
-            System.out.println("Informe o valor de B");
+            System.out.println("\n Informe o valor de B");
             holder = in.nextLine();      
             restricoes[i][restricoes[0].length-2]=Double.parseDouble(holder);
-            System.out.println("Informe o sinal [1: >= ][2: <= ][3: = ]");
+            System.out.println("\n Informe o sinal [1: >= ][2: <= ][3: = ]");
             holder = in.nextLine();      
             restricoes[i][restricoes[0].length-1]=Double.parseDouble(holder);
         }
             
-            System.out.println("suas restricoes são: \n");
+            System.out.println("\n Suas restricoes são: \n");
             for(int i = 0; i< NumRestricoes; i++){
                 for(int j = 0; j < variaveis; j++){
-                    System.out.print((restricoes[i][j]+"x"+j));
+                    System.out.print((restricoes[i][j]+" x "+j));
                 }
-                System.out.println("Seu valor de B e: "+restricoes[i][restricoes.length]);
+                System.out.println("\n Seu valor de B e: "+restricoes[i][restricoes.length]);
                 if(restricoes[i][restricoes.length-1] == 1){
-                    System.out.println("seu sinal e: >=");
+                    System.out.print(" seu sinal e: >=");
                 }else if(restricoes[i][restricoes.length-1] == 2){
-                    System.out.println("seu sinal e: <=");
+                    System.out.print(" seu sinal e: <=");
                 }else{
-                    System.out.println("seu sinal e: =");
+                    System.out.print(" seu sinal e: =");
                 }
             }
         
@@ -62,12 +62,13 @@ public class Entrada {
             holder = in.nextLine();      
             funcaoObjetiva[i]=Double.parseDouble(holder);  
         }
-        System.out.println("Sua função objetiva e: \n");
+        System.out.println("\n Sua função objetiva e: ");
             for(int i = 0; i< numeroDeVariaveis; i++){
                 if(funcaoObjetiva[i]<0){
-                System.out.print("-"+funcaoObjetiva[i]+"X"+(i+1));
+                System.out.print(" - "+funcaoObjetiva[i]+"X"+(i+1));
             }else{
-                    System.out.print("+"+funcaoObjetiva[i]+"X"+(i+1));
+                    System.out.print(" + "+funcaoObjetiva[i]+"X"+(i+1));
+                    
                 }
         }
             return funcaoObjetiva;

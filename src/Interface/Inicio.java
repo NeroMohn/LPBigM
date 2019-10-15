@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Interface;
-
+import simplex.Entrada;
 /**
  *
  * @author viict
@@ -27,32 +27,30 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSpinner1QtRestricoes = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
         jButtonIncluir = new javax.swing.JButton();
         jLabel2Restricoes = new javax.swing.JLabel();
         jLabel3Variaveis = new javax.swing.JLabel();
-        jSpinner2QtVariaveis = new javax.swing.JSpinner();
+        jSpinner1QtRestricoes = new javax.swing.JSpinner();
+        jSpinner1QtVariaveis = new javax.swing.JSpinner();
         jLabelFundoInicio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-        getContentPane().add(jSpinner1QtRestricoes);
-        jSpinner1QtRestricoes.setBounds(200, 170, 100, 30);
 
         jLabel1.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
         jLabel1.setText("Simplex - BigM");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(10, 10, 180, 50);
 
-        jButtonIncluir.setText("Incluir");
+        jButtonIncluir.setText("Avançar");
         jButtonIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonIncluirActionPerformed(evt);
             }
         });
         getContentPane().add(jButtonIncluir);
-        jButtonIncluir.setBounds(170, 240, 130, 40);
+        jButtonIncluir.setBounds(370, 110, 130, 40);
 
         jLabel2Restricoes.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel2Restricoes.setText("Quantas restrições ?");
@@ -63,21 +61,31 @@ public class Inicio extends javax.swing.JFrame {
         jLabel3Variaveis.setText("Quantas variáveis ?");
         getContentPane().add(jLabel3Variaveis);
         jLabel3Variaveis.setBounds(30, 80, 190, 70);
-        getContentPane().add(jSpinner2QtVariaveis);
-        jSpinner2QtVariaveis.setBounds(200, 100, 100, 30);
+        getContentPane().add(jSpinner1QtRestricoes);
+        jSpinner1QtRestricoes.setBounds(210, 160, 100, 40);
+        getContentPane().add(jSpinner1QtVariaveis);
+        jSpinner1QtVariaveis.setBounds(210, 90, 100, 40);
 
         jLabelFundoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fundo.jpg"))); // NOI18N
         jLabelFundoInicio.setText("Simplex - BigM");
         getContentPane().add(jLabelFundoInicio);
         jLabelFundoInicio.setBounds(-10, -10, 640, 430);
 
-        setSize(new java.awt.Dimension(624, 453));
+        setSize(new java.awt.Dimension(595, 281));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIncluirActionPerformed
+       Entrada entrada = new Entrada();
+          
+        jSpinner1QtVariaveis.getValue().equals(entrada.getNumeroDeVariaveis());
+        
+        //jSpinner1QtRestricoes.getValue().equals(entrada.getRestricoes());
+                
+                
         TelaPrincipal tela = new TelaPrincipal();
-        tela.setVisible(true);
+        tela.setVisible(true); //chama a tela para começar a funcionar
+        dispose(); //fecha a tela anterior
     }//GEN-LAST:event_jButtonIncluirActionPerformed
 
     /**
@@ -122,6 +130,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3Variaveis;
     private javax.swing.JLabel jLabelFundoInicio;
     private javax.swing.JSpinner jSpinner1QtRestricoes;
-    private javax.swing.JSpinner jSpinner2QtVariaveis;
+    private javax.swing.JSpinner jSpinner1QtVariaveis;
     // End of variables declaration//GEN-END:variables
 }
