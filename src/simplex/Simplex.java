@@ -22,6 +22,7 @@ public class Simplex {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         double[] funcaoObjetiva;
+        double[][] restricoes;
         
         System.out.println("Informe o número de variáveis");
         String holder = in.nextLine();
@@ -35,6 +36,7 @@ public class Simplex {
              
         Entrada entrada = new Entrada ();
         funcaoObjetiva = entrada.MontarFuncaoObjetiva(numeroDeVariaveis, necessidade);
+        restricoes = entrada.MontarRestricoes(numeroDeRestricoes, numeroDeVariaveis);
         
     }
     
