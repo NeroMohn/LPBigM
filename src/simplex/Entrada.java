@@ -22,7 +22,7 @@ public class Entrada {
         System.out.println("\n\n Agora vamos montar suas restrucoes");
         for(int i = 0; i< NumRestricoes; i++){
             for(int j = 0; j < variaveis; j++){
-                System.out.println("\n Informe o coeficiente de X"+(j+1)+" da restricao "+i+1);
+                System.out.println("\n Informe o coeficiente de X"+(j+1)+" da restricao "+(i+1));
                 holder = in.nextLine();      
                 restricoes[i][j]=Double.parseDouble(holder);  
             }
